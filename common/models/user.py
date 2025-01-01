@@ -11,9 +11,11 @@ class TKBUser(AbstractUser):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     firebase_uid = models.CharField(default="", max_length=28)
+
     # REVIEW: on_deleteは一旦
     # REVIEW: null = Falseにする
     # REVIEW createsuperuserコマンドをカスタマイズ
 
     def __str__(self):
+        """表示名を名前のみに指定"""
         return self.username
