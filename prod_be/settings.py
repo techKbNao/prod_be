@@ -131,7 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "common.W2User"
+AUTH_USER_MODEL = "common.TKBUser"
 
 # Django REST Frameworkの設定
 REST_FRAMEWORK = {
