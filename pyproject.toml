@@ -5,6 +5,11 @@ description = ""
 authors = ["nikedsb <ikedanao1230sbsnkr@gmail.com>"]
 readme = "README.md"
 
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.1.2"
@@ -14,15 +19,12 @@ python-dotenv = "^1.0.1"
 firebase-admin = "^6.5.0"
 ruff = "^0.7.0"
 django-cors-headers = "^4.5.0"
-django-sslserver = "^0.22"
 django-extensions = "^3.2.3"
 werkzeug = "^3.0.4"
 pyopenssl = "^24.2.1"
+django-sslserver2 = "^0.1.4"
+psycopg2-binary = "^2.9.10"
 
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 120
