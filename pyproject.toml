@@ -28,6 +28,7 @@ build-backend = "poetry.core.masonry.api"
 line-length = 120
 indent-width = 4
 target-version = "py312"
+exclude = ["common/migrations/"]
 
 [tool.ruff.lint]
 select = ["D1","E", "F", "W", "B", "I"]
