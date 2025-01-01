@@ -1,6 +1,8 @@
 {
     // NOTE: E501=一行当たりの文字数制限があるが、ruffと言うツールでチェックしているので、flake8では無視する
     "flake8.args": ["--ignore=E501"],
+    // NOTE: C0301=一行当たりの文字数制限があるが、ruffと言うツールでチェックしているので、pylintでは無視する
+    "pylint.args": ["--disable=C0301"],
     "todo-tree.general.tags": [
         "CHANGED",
         "FIXME",
