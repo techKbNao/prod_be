@@ -53,7 +53,6 @@ DEBUG = convert_string_to_bool(os.getenv("DEBUG"))
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -65,9 +64,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
-    "sslserver",
     "django_extensions",
     "common",
+    "django_sslserver2",
 ]
 
 MIDDLEWARE = [
@@ -107,8 +106,12 @@ WSGI_APPLICATION = "prod_be.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("POSTGRES_DB_NAME"),
+        "USER": os.getenv("POSTGRES_DB_USER"),
+        "PASSWORD": os.getenv("POSTGRES_DB_PASSWORD"),
+        "HOST": os.getenv("POSTGRES_DB_HOST"),
+        "PORT": 5432,
     }
 }
 

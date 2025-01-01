@@ -1,5 +1,11 @@
 # プロダクトのバックエンド
 ## セットアップ
+### Pythonのバージョンが合わない人向け
+```
+pyenv install 3.12.5
+pyenv local 3.12.5
+poetry env use 3.12.5
+```
 ### 依存ライブラリインストール
 ```
 # 仮想環境の作成とactivate
@@ -25,11 +31,11 @@ python manage.py createsuperuser
 ```
 # debug用の証明書の発行
 cd プロジェクトのディレクトリ
-openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
 # ローカルサーバーの起動
-python manage.py runsslserver --certificate cert.pem --key key.pem
+python manage.py runserver_plus --cert-file server.crt --key-file server.key
 ```
 
 
-
-
+## 接続DBについて
+- 本番はRDSを使用したいと考えている
+- ローカルではSQLiteを使用している
