@@ -30,8 +30,8 @@ indent-width = 4
 target-version = "py312"
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "B", "I"]
-ignore = []
+select = ["D1","E", "F", "W", "B", "I"]
+ignore = ["D100"]
 
 fixable = ["ALL"]
 
