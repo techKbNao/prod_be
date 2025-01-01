@@ -1,4 +1,6 @@
 {
+    // NOTE: E501=一行当たりの文字数制限があるが、ruffと言うツールでチェックしているので、flake8では無視する
+    "flake8.args": ["--ignore=E501"],
     "todo-tree.general.tags": [
         "CHANGED",
         "FIXME",
@@ -70,5 +72,5 @@
             "backgroundColor": "transparent",
             "color": "red",
         },
-    ]
+    ],
 }
